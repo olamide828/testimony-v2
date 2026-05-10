@@ -36,10 +36,10 @@ export default function Navbar() {
         scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100' : 'bg-transparent'
       }`}>
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          <Link to="/" className="flex flex-col leading-none">
+          {<Link to="/" className="flex flex-col leading-none ">
             <span className="font-sans text-[10px] font-semibold tracking-[0.2em] uppercase text-accent">NTA Worldwide</span>
             <span className="font-serif text-gray-900 text-lg font-semibold">Testimony Parish</span>
-          </Link>
+          </Link>}
 
           <nav className="hidden md:flex items-center gap-8">
             {links.map((l) => (
@@ -68,11 +68,11 @@ export default function Navbar() {
       {/* Mobile menu */}
       {open && (
         <div className="fixed inset-0 z-40 md:hidden">
-          <div className="absolute inset-0 bg-black/20" onClick={() => setOpen(false)} />
-          <div className="absolute top-0 right-0 bottom-0 w-72 bg-white shadow-2xl flex flex-col">
+          {/* <div className="absolute inset-0 bg-black/20" onClick={() => setOpen(false)} /> */}
+          <div className="absolute top-0 right-0 bottom-0 w-[400px] bg-white shadow-2xl flex flex-col">
             <div className="h-16 flex items-center justify-between px-6 border-b border-gray-100">
-              <span className="font-serif text-gray-900 font-semibold">Menu</span>
-              <button onClick={() => setOpen(false)}><HiX size={20} className="text-gray-500" /></button>
+              {/* <span className="font-serif text-gray-900 font-semibold">Menu</span> */}
+              {/* <button onClick={() => setOpen(false)}><HiX size={20} className="text-gray-500" /></button> */}
             </div>
             <nav className="flex flex-col p-6 gap-1">
               {links.map((l) => (
